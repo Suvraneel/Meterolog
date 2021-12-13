@@ -1,0 +1,36 @@
+.row-ht {
+  height: 200px;
+}
+
+.carousel-ht {
+  height: 150px;
+}
+
+.citycard img {
+  height: 140px;
+  width: 140px;
+}
+
+.weather-img {
+  height: auto !important;
+}
+
+.citycard {
+  width: 150px !important;
+  height: 140px !important;
+}
+
+.card-img {
+  height: 5em !important;
+  width: 5em !important;
+}
+
+.no-padding {
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+.progress-bar-thin {
+  height: 3px;
+}
+

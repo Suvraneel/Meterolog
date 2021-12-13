@@ -1,0 +1,463 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title>Meterolog</title>
+    <meta property="og:type" content="website">
+    <link rel="stylesheet" href="/assets/bootstrap/css/bootstrap.min.css?h=d911070e5840faae3cd3d756c3035b8f">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.12.0/css/all.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="/assets/fonts/fontawesome5-overrides.min.css?h=220695d33937f0c1d9977599320bf21d">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/baguettebox.js/1.10.0/baguetteBox.min.css">
+    <link rel="stylesheet" href="/assets/css/Lightbox-Gallery.css?h=53af5f9a448c3076a572cf29b3792231">
+    <link rel="stylesheet" href="/assets/css/main.css?h=9d1ca6d8c9b1ec9bee060ce98d180579">
+    <!-- Favicon -->
+    <link rel="apple-touch-icon" sizes="180x180" href="./assets/img/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="./assets/img/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="./assets/img/favicon/favicon-16x16.png">
+</head>
+
+<body id="page-top">
+    <div id="wrapper">
+        <nav class="navbar navbar-dark align-items-start sidebar sidebar-dark accordion bg-gradient-primary p-0">
+            <div class="container-fluid d-flex flex-column p-0"><a
+                    class="navbar-brand d-flex justify-content-center align-items-center sidebar-brand m-0" href="#">
+                    <div class="sidebar-brand-icon"><i class="fas fa-cloud-sun-rain"></i></div>
+                    <div class="sidebar-brand-text mx-3"><span>Meteorolog</span></div>
+                </a>
+                <hr class="sidebar-divider my-0">
+                <ul class="navbar-nav text-light" id="accordionSidebar">
+                    <li class="nav-item"><a class="nav-link active" href="#dash"><i
+                                class="fa fa-th-large"></i><span>Dashboard</span></a></li>
+                    <li class="nav-item"><a class="nav-link active" href="#graph"><i
+                                class="fa fa-bar-chart"></i><span>Statistics</span></a></li>
+                    <li class="nav-item"><a class="nav-link active" href="#map"><i
+                                class="fa fa-map-o"></i><span>Map</span></a></li>
+                    <li class="nav-item"><a class="nav-link active" href="#calendar"><i
+                                class="fa fa-calendar"></i><span>Calendar</span></a></li>
+                    <li class="nav-item"><a class="nav-link" href="register.html"><i
+                                class="fa fa-gear"></i><span>Setting</span></a></li>
+                </ul>
+                <div class="card">
+                    <div class="card-header no-margin">
+                        <!-- Start: 1 Row 2 Columns -->
+                        <div class="container no-padding">
+                            <div class="row">
+                                <div class="col-md-6 col-xl-5 no-padding"><img class="card-img no-padding"
+                                        src="https://openweathermap.org/img/wn/10d@2x.png"></div>
+                                <div class="col-md-6 col-xl-7 text-dark">
+                                    <h6>Today</h6>
+                                    <h6>11:44</h6><small>Mon, 11 Jan</small>
+                                </div>
+                            </div>
+                        </div><!-- End: 1 Row 2 Columns -->
+                    </div>
+                    <div class="card-body no-padding">
+                        <div class="col no-padding d-flex align-items-center flex-column"><span class="h3 text-dark">+4
+                                °C<br></span><span class="h5">New York<br></span><small>United States</small>
+                            <header></header>
+                            <header></header>
+                        </div>
+                    </div><!-- Start: 1 Row 2 Columns -->
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-md-6 no-padding"><small>Humidity</small></div>
+                            <div class="col-md-6 d-flex justify-content-end"><small>70%</small></div>
+                        </div>
+                        <div class="progress progress-bar-thin">
+                            <div class="progress-bar" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100"
+                                style="width: 70%;"></div>
+                        </div>
+                    </div><!-- End: 1 Row 2 Columns -->
+                    <!-- Start: 1 Row 2 Columns -->
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-md-6 no-padding"><small>Precipitation</small></div>
+                            <div class="col-md-6 d-flex justify-content-end"><small>25%</small></div>
+                        </div>
+                        <div class="progress progress-bar-thin" aria-valuenow="25">
+                            <div class="progress-bar" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"
+                                style="width: 25%;"></div>
+                        </div>
+                    </div><!-- End: 1 Row 2 Columns -->
+                    <!-- Start: 1 Row 2 Columns -->
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-md-6 no-padding"><small>Wind</small></div>
+                            <div class="col-md-6 d-flex justify-content-end"><small>4.5 km/h</small></div>
+                        </div>
+                    </div><!-- End: 1 Row 2 Columns -->
+                </div>
+                <div class="text-center d-none d-md-inline"></div>
+            </div>
+        </nav>
+        <div class="d-flex flex-column" id="content-wrapper">
+            <div id="content">
+                <nav class="navbar navbar-light navbar-expand bg-white shadow mb-4 topbar static-top">
+                    <div class="container-fluid"><button class="btn btn-link d-md-none rounded-circle me-3"
+                            id="sidebarToggleTop" type="button"><i class="fas fa-bars"></i></button>
+                        <form class="d-none d-sm-inline-block me-auto ms-md-3 my-2 my-md-0 mw-100 navbar-search">
+                            <div class="input-group"><button class="btn btn-primary py-0" type="button"><i
+                                        class="fas fa-search"></i></button><input
+                                    class="bg-light form-control border-0 small" type="text"
+                                    placeholder="Search for ..."></div>
+                        </form>
+                        <ul class="navbar-nav flex-nowrap ms-auto">
+                            <li class="nav-item dropdown d-sm-none no-arrow"><a class="dropdown-toggle nav-link"
+                                    aria-expanded="false" data-bs-toggle="dropdown" href="#"><i
+                                        class="fas fa-search"></i></a>
+                                <div class="dropdown-menu dropdown-menu-end p-3 animated--grow-in"
+                                    aria-labelledby="searchDropdown">
+                                    <form class="me-auto navbar-search w-100">
+                                        <div class="input-group"><input class="bg-light form-control border-0 small"
+                                                type="text" placeholder="Search for ...">
+                                            <div class="input-group-append"><button class="btn btn-primary py-0"
+                                                    type="button"><i class="fas fa-search"></i></button></div>
+                                        </div>
+                                    </form>
+                                </div>
+                            </li>
+                            <li class="nav-item dropdown no-arrow mx-1">
+                                <div class="nav-item dropdown no-arrow"><a class="dropdown-toggle nav-link"
+                                        aria-expanded="false" data-bs-toggle="dropdown" href="#"><i
+                                            class="fas fa-envelope fa-fw"></i><span
+                                            class="badge bg-danger badge-counter">3+</span></a>
+                                    <div class="dropdown-menu dropdown-menu-end dropdown-list animated--grow-in">
+                                        <h6 class="dropdown-header">alerts center</h6><a
+                                            class="dropdown-item d-flex align-items-center" href="#">
+                                            <div class="me-3">
+                                                <div class="bg-primary icon-circle"><i
+                                                        class="fas fa-file-alt text-white"></i></div>
+                                            </div>
+                                            <div><span class="small text-gray-500">December 12, 2019</span>
+                                                <p>A new monthly report is ready to download!</p>
+                                            </div>
+                                        </a><a class="dropdown-item d-flex align-items-center" href="#">
+                                            <div class="me-3">
+                                                <div class="bg-success icon-circle"><i
+                                                        class="fas fa-donate text-white"></i></div>
+                                            </div>
+                                            <div><span class="small text-gray-500">December 7, 2019</span>
+                                                <p>$290.29 has been deposited into your account!</p>
+                                            </div>
+                                        </a><a class="dropdown-item d-flex align-items-center" href="#">
+                                            <div class="me-3">
+                                                <div class="bg-warning icon-circle"><i
+                                                        class="fas fa-exclamation-triangle text-white"></i></div>
+                                            </div>
+                                            <div><span class="small text-gray-500">December 2, 2019</span>
+                                                <p>Spending Alert: We've noticed unusually high spending for your
+                                                    account.</p>
+                                            </div>
+                                        </a><a class="dropdown-item text-center small text-gray-500" href="#">Show All
+                                            Alerts</a>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="nav-item dropdown no-arrow mx-1">
+                                <div class="nav-item dropdown no-arrow"><a class="dropdown-toggle nav-link"
+                                        aria-expanded="false" data-bs-toggle="dropdown" href="#"><span
+                                            class="badge bg-danger badge-counter">7</span><i
+                                            class="fas fa-bell fa-fw"></i></a>
+                                    <div class="dropdown-menu dropdown-menu-end dropdown-list animated--grow-in">
+                                        <h6 class="dropdown-header">alerts center</h6><a
+                                            class="dropdown-item d-flex align-items-center" href="#">
+                                            <div class="dropdown-list-image me-3"><img class="rounded-circle"
+                                                    src="/assets/img/avatars/avatar4.jpeg?h=fefb30b61c8459a66bd338b7d790c3d5">
+                                                <div class="bg-success status-indicator"></div>
+                                            </div>
+                                            <div class="fw-bold">
+                                                <div class="text-truncate"><span>Hi there! I am wondering if you can
+                                                        help me with a problem I've been having.</span></div>
+                                                <p class="small text-gray-500 mb-0">Emily Fowler - 58m</p>
+                                            </div>
+                                        </a><a class="dropdown-item d-flex align-items-center" href="#">
+                                            <div class="dropdown-list-image me-3"><img class="rounded-circle"
+                                                    src="/assets/img/avatars/avatar2.jpeg?h=5d142be9441885f0935b84cf739d4112">
+                                                <div class="status-indicator"></div>
+                                            </div>
+                                            <div class="fw-bold">
+                                                <div class="text-truncate"><span>I have the photos that you ordered last
+                                                        month!</span></div>
+                                                <p class="small text-gray-500 mb-0">Jae Chun - 1d</p>
+                                            </div>
+                                        </a><a class="dropdown-item d-flex align-items-center" href="#">
+                                            <div class="dropdown-list-image me-3"><img class="rounded-circle"
+                                                    src="/assets/img/avatars/avatar3.jpeg?h=c5166867f10a4e454b5b2ae8d63268b3">
+                                                <div class="bg-warning status-indicator"></div>
+                                            </div>
+                                            <div class="fw-bold">
+                                                <div class="text-truncate"><span>Last month's report looks great, I am
+                                                        very happy with the progress so far, keep up the good
+                                                        work!</span></div>
+                                                <p class="small text-gray-500 mb-0">Morgan Alvarez - 2d</p>
+                                            </div>
+                                        </a><a class="dropdown-item d-flex align-items-center" href="#">
+                                            <div class="dropdown-list-image me-3"><img class="rounded-circle"
+                                                    src="/assets/img/avatars/avatar5.jpeg?h=35dc45edbcda6b3fc752dab2b0f082ea">
+                                                <div class="bg-success status-indicator"></div>
+                                            </div>
+                                            <div class="fw-bold">
+                                                <div class="text-truncate"><span>Am I a good boy? The reason I ask is
+                                                        because someone told me that people say this to all dogs, even
+                                                        if they aren't good...</span></div>
+                                                <p class="small text-gray-500 mb-0">Chicken the Dog · 2w</p>
+                                            </div>
+                                        </a><a class="dropdown-item text-center small text-gray-500" href="#">Show All
+                                            Alerts</a>
+                                    </div>
+                                </div>
+                                <div class="shadow dropdown-list dropdown-menu dropdown-menu-end"
+                                    aria-labelledby="alertsDropdown"></div>
+                            </li>
+                            <div class="d-none d-sm-block topbar-divider"></div>
+                            <li class="nav-item dropdown no-arrow">
+                                <div class="nav-item dropdown no-arrow"><a class="dropdown-toggle nav-link"
+                                        aria-expanded="false" data-bs-toggle="dropdown" href="#"><i
+                                            class="fa fa-user"></i><span
+                                            class="d-none d-lg-inline me-2 text-gray-600 small">Willam Jacobson</span><i
+                                            class="fa fa-chevron-down"></i></a>
+                                    <div class="dropdown-menu shadow dropdown-menu-end animated--grow-in"><a
+                                            class="dropdown-item" href="#"><i
+                                                class="fas fa-user fa-sm fa-fw me-2 text-gray-400"></i>&nbsp;Profile</a><a
+                                            class="dropdown-item" href="#"><i
+                                                class="fas fa-cogs fa-sm fa-fw me-2 text-gray-400"></i>&nbsp;Settings</a><a
+                                            class="dropdown-item" href="#"><i
+                                                class="fas fa-list fa-sm fa-fw me-2 text-gray-400"></i>&nbsp;Activity
+                                            log</a>
+                                        <div class="dropdown-divider"></div><a class="dropdown-item" href="#"><i
+                                                class="fas fa-sign-out-alt fa-sm fa-fw me-2 text-gray-400"></i>&nbsp;Logout</a>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </nav>
+                <div class="container-fluid">
+                    <!-- Start: Chart -->
+                    <div class="row">
+                        <div class="col col-12">
+                            <h3 class="text-dark mb-0" id="dash">Dashboard</h3><!-- Start: Lightbox Gallery -->
+                            <section class="photo-gallery">
+                                <div class="container">
+                                    <!-- Start: Intro -->
+                                    <div class="intro"></div><!-- End: Intro -->
+                                    <!-- Start: Photos -->
+                                    <div class="row photos" data-bss-baguettebox="">
+                                        <div class="col-sm-6 col-md-4 col-lg-2 item"><a
+                                                href="/assets/img/desk.jpg?h=a1a264780537cd5ef55acbd34afb098f"><img
+                                                    class="img-fluid"
+                                                    src="https://images.unsplash.com/photo-1558551649-e44c8f992010?ixlib=rb-1.2.1&amp;ixid=MnwxMjA3fDB8MHxzZWFyY2h8Nnx8YW1zdGVyZGFtfGVufDB8fDB8fA%3D%3D&amp;auto=format&amp;fit=crop&amp;w=600&amp;q=60"
+                                                    alt="Amsterdam"></a></div>
+                                        <div class="col-sm-6 col-md-4 col-lg-2 item"><a
+                                                href="/assets/img/building.jpg?h=6ef5437d90194906d185e64880c032d8"><img
+                                                    class="img-fluid"
+                                                    src="https://images.unsplash.com/photo-1529655683826-aba9b3e77383?ixlib=rb-1.2.1&amp;ixid=MnwxMjA3fDB8MHxzZWFyY2h8M3x8bG9uZG9ufGVufDB8fDB8fA%3D%3D&amp;auto=format&amp;fit=crop&amp;w=600&amp;q=60"
+                                                    alt="London"></a></div>
+                                        <div class="col-sm-6 col-md-4 col-lg-2 item"><a
+                                                href="/assets/img/loft.jpg?h=57df6bb27a728060276c7c2ad7fd004c"><img
+                                                    class="img-fluid"
+                                                    src="https://images.unsplash.com/photo-1610752400564-c97cbbb5cfba?ixlib=rb-1.2.1&amp;ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTB8fGJ1ZGFwZXN0fGVufDB8fDB8fA%3D%3D&amp;auto=format&amp;fit=crop&amp;w=600&amp;q=60"
+                                                    alt="Budapest"></a></div>
+                                        <div class="col-sm-6 col-md-4 col-lg-2 item"><a
+                                                href="/assets/img/building.jpg?h=6ef5437d90194906d185e64880c032d8"><img
+                                                    class="img-fluid"
+                                                    src="https://images.unsplash.com/photo-1502602898657-3e91760cbb34?ixlib=rb-1.2.1&amp;ixid=MnwxMjA3fDB8MHxzZWFyY2h8M3x8cGFyaXN8ZW58MHx8MHx8&amp;auto=format&amp;fit=crop&amp;w=600&amp;q=60"
+                                                    alt="Paris"></a></div>
+                                        <div class="col-sm-6 col-md-4 col-lg-2 item"><a
+                                                href="/assets/img/loft.jpg?h=57df6bb27a728060276c7c2ad7fd004c"><img
+                                                    class="img-fluid"
+                                                    src="https://images.unsplash.com/photo-1477414956199-7dafc86a4f1a?ixlib=rb-1.2.1&amp;ixid=MnwxMjA3fDB8MHxzZWFyY2h8M3x8Y2hpY2Fnb3xlbnwwfHwwfHw%3D&amp;auto=format&amp;fit=crop&amp;w=600&amp;q=60"
+                                                    alt="Chicago"></a></div>
+                                        <div class="col-sm-6 col-md-4 col-lg-2 item"><a
+                                                href="/assets/img/desk.jpg?h=a1a264780537cd5ef55acbd34afb098f"><img
+                                                    class="img-fluid"
+                                                    src="https://images.unsplash.com/photo-1601042879364-f3947d3f9c16?ixlib=rb-1.2.1&amp;ixid=MnwxMjA3fDB8MHxzZWFyY2h8NHx8dG9reW98ZW58MHx8MHx8&amp;auto=format&amp;fit=crop&amp;w=600&amp;q=60"
+                                                    alt="Tokyo"></a></div>
+                                    </div><!-- End: Photos -->
+                                </div>
+                            </section><!-- End: Lightbox Gallery -->
+                        </div>
+                    </div><!-- End: Chart -->
+                    <!-- Start: Chart -->
+                    <div class="row">
+                        <div class="col col-12">
+                            <h3 class="text-dark mb-0" id="forecast">Weather Forecast</h3>
+                            <!-- Start: Lightbox Gallery -->
+                            <section class="photo-gallery">
+                                <div class="container">
+                                    <!-- Start: Intro -->
+                                    <div class="intro"></div><!-- End: Intro -->
+                                    <!-- Start: Photos -->
+                                    <div class="row photos" data-bss-baguettebox="">
+                                        <div class="col-sm-6 col-md-4 col-lg-2 item">
+                                            <div class="card">
+                                                <div class="card-body d-flex align-items-center flex-column"><img
+                                                        class="weather-img"
+                                                        src="https://openweathermap.org/img/wn/10d@2x.png"></div>
+                                                <div class="col d-flex flex-column align-items-center small">
+                                                    <h6 class="text-muted mb-2">-5/+4</h6>
+                                                    <h6 class="text-muted mb-2">11 Mon</h6>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-sm-6 col-md-4 col-lg-2 item">
+                                            <div class="card">
+                                                <div class="card-body d-flex align-items-center flex-column"><img
+                                                        class="weather-img"
+                                                        src="https://openweathermap.org/img/wn/01d@2x.png"></div>
+                                                <div class="col d-flex flex-column align-items-center small">
+                                                    <h6 class="text-muted mb-2">-6/+3</h6>
+                                                    <h6 class="text-muted mb-2">12 Tue</h6>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-sm-6 col-md-4 col-lg-2 item">
+                                            <div class="card">
+                                                <div class="card-body d-flex align-items-center flex-column"><img
+                                                        class="weather-img"
+                                                        src="https://openweathermap.org/img/wn/11d@2x.png"></div>
+                                                <div class="col d-flex flex-column align-items-center small">
+                                                    <h6 class="text-muted mb-2">-3/+4</h6>
+                                                    <h6 class="text-muted mb-2">13 Wed</h6>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-sm-6 col-md-4 col-lg-2 item">
+                                            <div class="card">
+                                                <div class="card-body d-flex align-items-center flex-column"><img
+                                                        class="weather-img"
+                                                        src="https://openweathermap.org/img/wn/09d@2x.png"></div>
+                                                <div class="col d-flex flex-column align-items-center small">
+                                                    <h6 class="text-muted mb-2">-5/+4</h6>
+                                                    <h6 class="text-muted mb-2">14 Thurs</h6>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-sm-6 col-md-4 col-lg-2 item">
+                                            <div class="card">
+                                                <div class="card-body d-flex align-items-center flex-column"><img
+                                                        class="weather-img"
+                                                        src="https://openweathermap.org/img/wn/13d@2x.png"></div>
+                                                <div class="col d-flex flex-column align-items-center small">
+                                                    <h6 class="text-muted mb-2">-5/+4</h6>
+                                                    <h6 class="text-muted mb-2">15 Fri</h6>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-sm-6 col-md-4 col-lg-2 item">
+                                            <div class="card">
+                                                <div class="card-body"><img class="weather-img"
+                                                        src="https://openweathermap.org/img/wn/02d@2x.png"></div>
+                                                <div class="col d-flex flex-column align-items-center small">
+                                                    <h6 class="text-muted mb-2">-5/+4</h6>
+                                                    <h6 class="text-muted mb-2">16 Sat</h6>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div><!-- End: Photos -->
+                                </div>
+                            </section><!-- End: Lightbox Gallery -->
+                        </div>
+                    </div><!-- End: Chart -->
+                    <div class="row">
+                        <div class="col-lg-12 col-xl-12">
+                            <div class="card shadow mb-4">
+                                <div class="card-header d-flex justify-content-between align-items-center" id="graph">
+                                    <h6 class="text-primary fw-bold m-0">Weather Graph</h6>
+                                    <div class="dropdown no-arrow"><button class="btn btn-link btn-sm dropdown-toggle"
+                                            aria-expanded="false" data-bs-toggle="dropdown" type="button"><i
+                                                class="fas fa-ellipsis-v text-gray-400"></i></button>
+                                        <div class="dropdown-menu shadow dropdown-menu-end animated--fade-in">
+                                            <p class="text-center dropdown-header">dropdown header:</p><a
+                                                class="dropdown-item" href="#">&nbsp;Action</a><a class="dropdown-item"
+                                                href="#">&nbsp;Another action</a>
+                                            <div class="dropdown-divider"></div><a class="dropdown-item"
+                                                href="#">&nbsp;Something else here</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card-body">
+                                    <div class="chart-area"><canvas
+                                            data-bss-chart="{&quot;type&quot;:&quot;line&quot;,&quot;data&quot;:{&quot;labels&quot;:[&quot;Jan&quot;,&quot;Feb&quot;,&quot;Mar&quot;,&quot;Apr&quot;,&quot;May&quot;,&quot;Jun&quot;,&quot;Jul&quot;,&quot;Aug&quot;],&quot;datasets&quot;:[{&quot;label&quot;:&quot;Earnings&quot;,&quot;fill&quot;:true,&quot;data&quot;:[&quot;0&quot;,&quot;10000&quot;,&quot;5000&quot;,&quot;15000&quot;,&quot;10000&quot;,&quot;20000&quot;,&quot;15000&quot;,&quot;25000&quot;],&quot;backgroundColor&quot;:&quot;rgba(78, 115, 223, 0.05)&quot;,&quot;borderColor&quot;:&quot;rgba(78, 115, 223, 1)&quot;}]},&quot;options&quot;:{&quot;maintainAspectRatio&quot;:false,&quot;legend&quot;:{&quot;display&quot;:false,&quot;labels&quot;:{&quot;fontStyle&quot;:&quot;normal&quot;}},&quot;title&quot;:{&quot;fontStyle&quot;:&quot;normal&quot;},&quot;scales&quot;:{&quot;xAxes&quot;:[{&quot;gridLines&quot;:{&quot;color&quot;:&quot;rgb(234, 236, 244)&quot;,&quot;zeroLineColor&quot;:&quot;rgb(234, 236, 244)&quot;,&quot;drawBorder&quot;:false,&quot;drawTicks&quot;:false,&quot;borderDash&quot;:[&quot;2&quot;],&quot;zeroLineBorderDash&quot;:[&quot;2&quot;],&quot;drawOnChartArea&quot;:false},&quot;ticks&quot;:{&quot;fontColor&quot;:&quot;#858796&quot;,&quot;fontStyle&quot;:&quot;normal&quot;,&quot;padding&quot;:20}}],&quot;yAxes&quot;:[{&quot;gridLines&quot;:{&quot;color&quot;:&quot;rgb(234, 236, 244)&quot;,&quot;zeroLineColor&quot;:&quot;rgb(234, 236, 244)&quot;,&quot;drawBorder&quot;:false,&quot;drawTicks&quot;:false,&quot;borderDash&quot;:[&quot;2&quot;],&quot;zeroLineBorderDash&quot;:[&quot;2&quot;]},&quot;ticks&quot;:{&quot;fontColor&quot;:&quot;#858796&quot;,&quot;fontStyle&quot;:&quot;normal&quot;,&quot;padding&quot;:20}}]}}}"></canvas>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div><iframe allowfullscreen="" frameborder="0" loading="lazy"
+                        src="https://www.google.com/maps/embed/v1/place?key=AIzaSyAPPopCJHxOtwtsGokOpoKNRnWCq4XRH-k&amp;q=Paris%2C+France&amp;zoom=11"
+                        id="map" width="100%" height="400"></iframe>
+                    <div class="row">
+                        <div class="col-lg-6 col-xl-12 mb-4">
+                            <div class="card shadow mb-4"></div>
+                            <div class="card shadow mb-4">
+                                <div class="card-header py-3" id="calendar">
+                                    <h6 class="text-primary fw-bold m-0">Calendar/Todo List</h6>
+                                </div>
+                                <ul class="list-group list-group-flush">
+                                    <li class="list-group-item">
+                                        <div class="row align-items-center no-gutters">
+                                            <div class="col me-2">
+                                                <h6 class="mb-0"><strong>Lunch meeting</strong></h6><span
+                                                    class="text-xs">10:30 AM</span>
+                                            </div>
+                                            <div class="col-auto">
+                                                <div class="form-check"><input class="form-check-input" type="checkbox"
+                                                        id="formCheck-1"><label class="form-check-label"
+                                                        for="formCheck-1"></label></div>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li class="list-group-item">
+                                        <div class="row align-items-center no-gutters">
+                                            <div class="col me-2">
+                                                <h6 class="mb-0"><strong>Lunch meeting</strong></h6><span
+                                                    class="text-xs">11:30 AM</span>
+                                            </div>
+                                            <div class="col-auto">
+                                                <div class="form-check"><input class="form-check-input" type="checkbox"
+                                                        id="formCheck-2"><label class="form-check-label"
+                                                        for="formCheck-2"></label></div>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li class="list-group-item">
+                                        <div class="row align-items-center no-gutters">
+                                            <div class="col me-2">
+                                                <h6 class="mb-0"><strong>Lunch meeting</strong></h6><span
+                                                    class="text-xs">12:30 AM</span>
+                                            </div>
+                                            <div class="col-auto">
+                                                <div class="form-check"><input class="form-check-input" type="checkbox"
+                                                        id="formCheck-3"><label class="form-check-label"
+                                                        for="formCheck-3"></label></div>
+                                            </div>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <footer class="bg-white sticky-footer">
+                <div class="container my-auto">
+                    <div class="text-center my-auto copyright"><span>Copyright © Suvraneel 2021</span></div>
+                </div>
+            </footer>
+        </div><a class="border rounded d-inline scroll-to-top" href="#page-top"><i class="fas fa-angle-up"></i></a>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.bundle.min.js"></script>
+    <script src="/assets/js/bs-init.js?h=e2b0d57f2c4a9b0d13919304f87f79ae"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/baguettebox.js/1.10.0/baguetteBox.min.js"></script>
+    <script src="/assets/js/Lightbox-Gallery.js?h=64eb55ccbc6ead5e91ebe308caacba6e"></script>
+    <script src="/assets/js/theme.js?h=79f403485707cf2617c5bc5a2d386bb0"></script>
+</body>
+
+</html>
